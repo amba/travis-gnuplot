@@ -1,0 +1,14 @@
+sudo: false
+install:
+  - cd /tmp
+  
+  - wget https://sourceforge.net/projects/gnuplot/files/gnuplot/5.0.5/gnuplot-5.0.5.tar.gz
+  - tar -xf gnuplot-5.0.5.tar.gz
+  - cd gnuplot-5.0.5
+  - ./configure --prefix=$HOME/local
+  - make -j2
+  - make install
+  - export PATH="$HOME/local/bin:$PATH"
+  - echo PATH
+  - cd
+  - gnuplot --version
