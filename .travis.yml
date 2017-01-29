@@ -2,7 +2,7 @@ sudo: false
 addons:
   apt:
     packages:
-      - libgd-dev
+      - libgd2-xpm-dev
         
 install:
   - cd /tmp
@@ -17,3 +17,8 @@ install:
   - echo PATH
   - cd
   - gnuplot --version
+
+notifications:
+  email:
+    on_success: never
+    on_failure: always
