@@ -6,7 +6,6 @@ addons:
         
 install:
   - cd /tmp
-  
   - wget https://sourceforge.net/projects/gnuplot/files/gnuplot/5.0.5/gnuplot-5.0.5.tar.gz
   - tar -xf gnuplot-5.0.5.tar.gz
   - cd gnuplot-5.0.5
@@ -22,4 +21,4 @@ install:
 notifications:
   email:
     on_success: never
-    on_failure: always
+    on_failure: never
