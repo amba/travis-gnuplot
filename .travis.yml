@@ -2,7 +2,7 @@ sudo: false
 addons:
   apt:
     packages:
-      - libgd2-xpm-dev
+      - libgd2-noxpm-dev
         
 install:
   - cd /tmp
@@ -17,6 +17,7 @@ install:
   - echo PATH
   - cd
   - gnuplot --version
+  - gnuplot -e 'set term'
 
 notifications:
   email:
