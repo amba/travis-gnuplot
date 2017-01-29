@@ -1,4 +1,9 @@
 sudo: false
+addons:
+  apt:
+    packages:
+      - libgd-dev
+        
 install:
   - cd /tmp
   
